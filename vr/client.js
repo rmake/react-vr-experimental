@@ -9,12 +9,15 @@ import {
 import {
     MouseRayCaster
 } from 'ovrui';
-
+import * as THREE from 'three';
+import ThreeDOFCaster from "../src/inputs/3dof/ThreeDOFRayCaster";
 
 function init(bundle, parent, options) {
+    const scene = new THREE.Scene();
     const vr = new VRInstance(bundle, 'ReactVrExperimental', parent, {
-        raycasters: [new MouseRayCaster()],
+        raycasters: [new ThreeDOFCaster(scene), new MouseRayCaster()],
         cursorVisibility: 'auto',
+        scene: scene,
         // Add custom options here
         ...options,
     });

@@ -25,8 +25,8 @@ export default class ButtonsScene extends SceneBase {
                 buttons.push(
                     <VrButton style={{
                             backgroundColor: this.state.clicked[i]
-                                ? "red"
-                                : "blue",
+                                ? "#aa2211"
+                                : "#1122aa",
                             height: 0.29,
                             margin: 0.01
                         }} onClick={() => {

@@ -22,18 +22,22 @@ export default class Menu extends SceneBase {
                 label: "buttonsScene",
                 scenePath: "buttonsScene",
             },
+            {
+                label: "roomScene",
+                scenePath: "roomScene",
+            },
         ];
 
         var buttonComponents = [];
-        buttons.forEach((button) => {
+        buttons.forEach((button, i) => {
             buttonComponents.push(
                 <VrButton style={{
-                    backgroundColor: "blue",
+                    backgroundColor: "#1122aa",
                     flex: 1,
                     margin: 0.01
                 }} onClick={() => {
                     this.replaceScene(button.scenePath);
-                }}>
+                }} key={`button${i}`}>
                     <Text>{button.label}</Text>
                 </VrButton>
             )
@@ -47,7 +51,7 @@ export default class Menu extends SceneBase {
                         0.5, 0.5
                     ],
                     flexDirection: 'column',
-                    height: 1,
+                    height: 2,
                     width: 1,
                     padding: 0.2,
                     transform: [

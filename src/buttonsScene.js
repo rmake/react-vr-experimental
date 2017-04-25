@@ -5,7 +5,8 @@ import {
     Text,
     View,
     Pano,
-    VrButton
+    VrButton,
+    Scene,
 } from 'react-vr';
 import SceneBase from "./sceneBase";
 
@@ -45,6 +46,7 @@ export default class ButtonsScene extends SceneBase {
             <View>
                 <Pano source={asset('chess-world.jpg')}/>
                 <View style={{
+                    position: "absolute",
                     layoutOrigin: [
                         0.5, 0.5
                     ],

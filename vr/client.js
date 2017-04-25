@@ -6,16 +6,14 @@
 import {
     VRInstance
 } from 'react-vr-web';
-import {
-    MouseRayCaster
-} from 'ovrui';
+import MyMouseRayCcaster from '../src/myMouseRayCaster';
 import * as THREE from 'three';
 import ThreeDOFCaster from "../src/inputs/3dof/ThreeDOFRayCaster";
 
 function init(bundle, parent, options) {
     const scene = new THREE.Scene();
     const vr = new VRInstance(bundle, 'ReactVrExperimental', parent, {
-        raycasters: [new ThreeDOFCaster(scene), new MouseRayCaster()],
+        raycasters: [new ThreeDOFCaster(scene), new MyMouseRayCcaster()],
         cursorVisibility: 'auto',
         scene: scene,
         // Add custom options here

@@ -7,6 +7,7 @@ import {
     Text,
     View,
     VrButton,
+    Scene,
 } from 'react-vr';
 
 import Menu from "./src/menu";
@@ -45,6 +46,7 @@ export default class ReactVrExperimental extends React.Component {
             <View>
                 {currentScene}
                 <View style={{
+                    position: 'absolute',
                     layoutOrigin: [
                         0.5, 0.5
                     ],
@@ -58,8 +60,8 @@ export default class ReactVrExperimental extends React.Component {
                         {
                             rotateX: -90,
                         },
-
-                    ]
+                    ],
+                    renderGroup: true,
                 }}>
                     <VrButton style={{
                         backgroundColor: "#1122aa",
@@ -71,9 +73,21 @@ export default class ReactVrExperimental extends React.Component {
                         <Text>Back To Menu</Text>
                     </VrButton>
                 </View>
+                {
+                    //<Scene
+                    //    style={{
+                    //        position: 'absolute',
+                    //        transform: [
+                    //            {
+                    //                translate: [0, 0, 0]
+                    //            },
+                    //        ]
+                    //    }}
+                    //    >
+                    //</Scene>
+                }
+
             </View>
-
-
         );
     }
 };

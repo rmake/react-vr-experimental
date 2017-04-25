@@ -5,7 +5,8 @@ import {
     Text,
     View,
     Pano,
-    VrButton
+    VrButton,
+    Scene,
 } from 'react-vr';
 import SceneBase from "./sceneBase";
 
@@ -47,6 +48,7 @@ export default class Menu extends SceneBase {
             <View>
                 <Pano source={asset('chess-world.jpg')}/>
                 <View style={{
+                    position: "absolute",
                     layoutOrigin: [
                         0.5, 0.5
                     ],

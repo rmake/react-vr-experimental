@@ -73,19 +73,6 @@ export default class ReactVrExperimental extends React.Component {
                         <Text>Back To Menu</Text>
                     </VrButton>
                 </View>
-                {
-                    //<Scene
-                    //    style={{
-                    //        position: 'absolute',
-                    //        transform: [
-                    //            {
-                    //                translate: [0, 0, 0]
-                    //            },
-                    //        ]
-                    //    }}
-                    //    >
-                    //</Scene>
-                }
 
             </View>
         );

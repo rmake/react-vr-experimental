@@ -12,6 +12,9 @@ import {
     VrHeadModel,
     Animated,
 } from 'react-vr';
+import {
+    Linking,
+} from "react-native";
 import SceneBase from "./sceneBase";
 
 export default class RoomScene extends SceneBase {
@@ -100,6 +103,33 @@ export default class RoomScene extends SceneBase {
                     }}>
                     {buttons}
                 </View>
+                <VrButton
+                    style={{
+                        position: 'absolute',
+                        layoutOrigin: [
+                            0.5, 0.5
+                        ],
+                        transform: [
+                            {
+                                translate: [0.56, -1, -1]
+                            },
+                            {
+                                rotateX: -90,
+                            },
+                        ],
+                        flexDirection: 'column',
+                        width: 0.5,
+                        height: 0.5,
+                        backgroundColor: "#1122aa",
+                    }} onClick={() => {
+                        Linking.openURL("https://sketchfab.com/models/d4dfcb504628407ba2dfc4e5ccf32bb7").catch(err => console.error('cannot open url', err));
+                    }} >
+                    <Text style={{
+                            fontSize: 0.05,
+                        }}>
+                        Easy VR Creation: Multiple Rooms In Minutes by walkaboutworlds is licensed under CC Attribution
+                    </Text>
+                </VrButton>
                 <Animated.View
                     style={{
                         position: 'absolute',

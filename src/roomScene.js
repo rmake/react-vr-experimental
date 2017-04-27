@@ -40,7 +40,6 @@ export default class RoomScene extends SceneBase {
     }
 
     moveTo = (position, e) => {
-        console.log("position " + position);
         var animations = [];
         position.forEach((v, i) => {
             animations.push(
@@ -58,7 +57,6 @@ export default class RoomScene extends SceneBase {
             animations
         ).start();
     };
-
 
     render() {
 
@@ -155,7 +153,6 @@ export default class RoomScene extends SceneBase {
                             mtl:asset("room/room.mtl"),
                         }}
                         lit={false}
-                        cursorVisibilitySlop={{top: 0.10, bottom: 0.10, left: 0, right: 0}}
                         >
 
                     </Model>
